@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forex Finder</title>
+</head>
+<body>
+
+<h1>EUR Exchange Rate Finder</h1>
+
+<form method="POST">
+
+    <label>Day:</label>
+    <input type="text" name="Day" placeholder="DD (e.g. 05)" required>
+
+    <br><br>
+
+    <label>Month:</label>
+    <input type="text" name="Month" placeholder="MM (e.g. 01)" required>
+
+    <br><br>
+
+    <label>Year:</label>
+    <input type="text" name="Year" placeholder="YYYY (e.g. 2020)" required>
+
+    <br><br>
+
+    <label>Currency:</label>
+    <select name="Currency">
+        <option value="USD">USD</option>
+        <option value="INR">INR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Get Rate</button>
+
+</form>
+
+{% if result %}
+    <h2>{{ result }}</h2>
+{% endif %}
+
+</body>
+</html>
