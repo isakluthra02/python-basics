@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke App</title>
+</head>
+<body>
+    <h4>Joke Generator</h4>
+    <h5>{{joke}}</h5>
+    <form method="get">
+        <select name="language">
+            <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+            <option value="es" {% if lang == 'es' %}selected{% endif %}>Spanish</option>
+            <option value="de" {% if lang == 'de' %}selected{% endif %}>German</option>
+            <option value="eu" {% if lang == 'eu' %}selected{% endif %}>Basque</option>
+            <option value="gl" {% if lang == 'gl' %}selected{% endif %}>Glacian</option>
+        </select>
+        <button type="submit">Change Language</button>
+    </form>
+    <br>
+    <form method="get">
+        <input type="hidden" name="language" value="{{lang}}">
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>
